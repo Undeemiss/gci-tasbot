@@ -4,7 +4,8 @@ from pynput import keyboard
 controller = keyboard.Controller()
 
 def on_click(x, y, button, pressed):
-    print(f"({x}, {y}) - {button} : {pressed}")
+    if button == mouse.Button.button9 and pressed == True:
+        print(f"({x}, {y})")
 
     
 try:
